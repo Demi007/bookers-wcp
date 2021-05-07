@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <styles type="text/css" media="all" href="books">
+   <title>BookersIndex</title>
+   <meta charset="UTF-8">
+</head>
+
 <body>
    <p id="notice"></p>
    <h1>Books</h1>
@@ -15,24 +23,21 @@
       <tbody>
          <% @books.each do |book| %>
          <tr>
-            <%= book.title %>
-            <%= book.body %>
-            <%= link_to%> 
-            <%= link_to%>
-            <%= link_to 'Destroy', method: :delete%>
+            <th><%= book.title %></th>
+            <th><%= book.body %></th>
+            <th><%= link_to 'show'%></th>
+            <th><%= link_to 'edit'%></th>
+            <th><%= link_to 'Destroy', method: :delete%>
          </tr>
          <% end %>
       </tbody>
       
    </table>
    
-   <h2>New book</h2>
-   <form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
-      <input name="utf8" type="hidden" value="">
-      <input type="hidden" name="authenticity_token" value=>
+   <h2>New book</h2
+   <form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="fnNnmfvLNI3onfbjoieE1cEt+Fd0C+74kMSJ3VgzF6XDLmtF8o8KMNe30o1Qi+BoSn+5TabmOgFIcj/M7A82MQ==">
 
   <div class="field">
-
     <label for="book_title">Title</label>
     <input class="book_title" type="text" name="book[title]" id="book_title">
   </div>
@@ -47,3 +52,4 @@
   </div>
 </form>
 </body>
+</html>
